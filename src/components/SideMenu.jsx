@@ -22,33 +22,33 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
         <ul className='sidebar-list'>
           <li className='sidebar-list-item'>
-            <Link to="/">
+            <Link to="#">
               <BsGrid1X2Fill className='icon' /> Dashboard
             </Link>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="/products">
+            <Link to="#">
               <BsFillArchiveFill className='icon' /> Products
             </Link>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="">
+            <Link to="#">
               <BsBoxArrowInDownLeft className='icon' /> Income {/* Changed icon */}
             </Link>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="">
+            <Link to="#">
               <BsPeopleFill className='icon' /> Customers
             </Link>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="">
+            <Link to="#">
               <BsLifePreserver className='icon' /> Help {/* Changed icon */}
             </Link>
           </li>
 
           <li className='sidebar-list-item'>
-            <Link to="">
+            <Link to="#">
               <BsFillGearFill className='icon' /> Setting
             </Link>
           </li>

@@ -20,10 +20,10 @@ function App() {
 
       <SideMenu openSidebarToggle={openSidebarToggle} openSidebar={openSidebar} />
       <Home />
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
