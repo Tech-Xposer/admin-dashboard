@@ -1,9 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import Sidenav from './Sidenav'
+import AppHeader from './components/AppHeader';
+import { BrowserRouter, Route } from "react-router-dom";
+import SideMenu from './components/SideMenu';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+
 function App() {
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+
+  const openSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle);
+  }
+
   return (
-    <Sidenav/>
+    <div className='grid-container'>
+
+      <AppHeader openSidebar={openSidebar} />
+
+      <SideMenu openSidebarToggle={openSidebarToggle} openSidebar={openSidebar} />
+      <Home />
+      <BrowserRouter>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </BrowserRouter>
+    </div>
   );
 }
 
