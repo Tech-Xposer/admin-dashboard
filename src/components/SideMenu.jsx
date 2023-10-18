@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
 import {
   BsCart3,
   BsGrid1X2Fill,
@@ -9,53 +8,53 @@ import {
 } from 'react-icons/bs';
 import { BsBoxArrowInDownLeft, BsLifePreserver } from 'react-icons/bs'; // Import new icons
 
-function Sidebar({ openSidebarToggle, OpenSidebar }) {
+function SideMenu({ openSidebarToggle, openSidebar }) {
   return (
-    <BrowserRouter>
+      
       <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
         <div className='sidebar-title'>
           <div className='sidebar-brand'>
-            <BsCart3 className='icon_header' /> SHOP
+            <BsFillGearFill className='icon_header' /> Dashboard
           </div>
-          <span className='icon close_icon' onClick={OpenSidebar}>X</span>
+          <span className='icon close_icon' onClick={openSidebar}>X</span>
         </div>
 
         <ul className='sidebar-list'>
           <li className='sidebar-list-item'>
-            <Link to="#">
+            <a href="#">
               <BsGrid1X2Fill className='icon' /> Dashboard
-            </Link>
+            </a>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="#">
+            <a href="#">
               <BsFillArchiveFill className='icon' /> Products
-            </Link>
+            </a>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="#">
+            <a href="#">
               <BsBoxArrowInDownLeft className='icon' /> Income {/* Changed icon */}
-            </Link>
+            </a>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="#">
+            <a href="#">
               <BsPeopleFill className='icon' /> Customers
-            </Link>
+            </a>
           </li>
           <li className='sidebar-list-item'>
-            <Link to="#">
+            <a href="#">
               <BsLifePreserver className='icon' /> Help {/* Changed icon */}
-            </Link>
+            </a>
           </li>
 
           <li className='sidebar-list-item'>
-            <Link to="#">
+            <a href="#">
               <BsFillGearFill className='icon' /> Setting
-            </Link>
+            </a>
           </li>
         </ul>
       </aside>
-    </BrowserRouter>
+
   );
 }
 
-export default Sidebar;
+export default SideMenu;
